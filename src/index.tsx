@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './components/app';
 import { ApolloProvider } from '@apollo/client';
-import { HelmetProvider } from "react-helmet-async"
+import { HelmetProvider } from 'react-helmet-async';
 import { client } from './apollo';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
   <React.StrictMode>
@@ -13,7 +13,7 @@ ReactDOM.render(
       </HelmetProvider>
     </ApolloProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
 
 // If you want to start measuring performance in your app, pass a function

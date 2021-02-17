@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface IButtonProps {
     canClick: boolean;
@@ -6,12 +6,18 @@ interface IButtonProps {
     actionText: string;
 }
 
-export const Button: React.FC<IButtonProps> = ({ canClick, loading, actionText }) => (
+export const Button: React.FC<IButtonProps> = ({
+    canClick,
+    loading,
+    actionText,
+}) => (
     <button
-        className={` ${canClick ? 'bg-green-600 hover:bg-green-500' : 'bg-gray-300'} 
-    py-3 text-white font-semibold rounded text-lg focus:outline-none
-    hover:opacity-90 pointer-events-none`}
+        role="button"
+        className={`text-lg font-medium focus:outline-none text-white py-4  transition-colors ${canClick
+            ? "bg-green-600 hover:bg-green-700"
+            : "bg-gray-300 pointer-events-none"
+            }`}
     >
-        {loading ? 'Loading...' : actionText}
+        {loading ? "Loading..." : actionText}
     </button>
 );
