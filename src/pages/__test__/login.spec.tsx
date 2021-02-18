@@ -32,7 +32,7 @@ describe('<Login />', () => {
   });
 
   it('displays email validation errors', async () => {
-    const { getByPlaceholderText, debug, getByRole } = renderResult;
+    const { getByPlaceholderText, getByRole } = renderResult;
     const email = getByPlaceholderText(/email/i);
     await waitFor(() => {
       userEvent.type(email, 'this@wont');
@@ -49,7 +49,7 @@ describe('<Login />', () => {
   });
 
   it('displays password required errors', async () => {
-    const { getByPlaceholderText, debug, getByRole } = renderResult;
+    const { getByPlaceholderText, getByRole } = renderResult;
     const email = getByPlaceholderText(/email/i);
     const submitBtn = getByRole('button');
     await waitFor(() => {
@@ -61,7 +61,7 @@ describe('<Login />', () => {
   });
 
   it('submits form and calls mutation', async () => {
-    const { getByPlaceholderText, debug, getByRole } = renderResult;
+    const { getByPlaceholderText, getByRole } = renderResult;
     const email = getByPlaceholderText(/email/i);
     const password = getByPlaceholderText(/password/i);
     const submitBtn = getByRole('button');
