@@ -118,9 +118,6 @@ export const CreateAccount = () => {
           {errors.password?.message && (
             <FormError errorMessage={errors.password?.message} />
           )}
-          {errors.password?.type === 'minLength' && (
-            <FormError errorMessage="Password must be 8 characters" />
-          )}
           <Button
             canClick={formState.isValid}
             loading={loading}

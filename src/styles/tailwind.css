@@ -8,4 +8,12 @@
 .btn {
   @apply bg-green-600 py-3 text-white font-semibold rounded text-lg focus:outline-none hover:opacity-90;
 }
+
+.container {
+  @apply xl:px-10 px-4 mx-auto;
+}
+
+.link {
+  @apply text-green-600 hover:underline;
+}
 @tailwind utilities;
