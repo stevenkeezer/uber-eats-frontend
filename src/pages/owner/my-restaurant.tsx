@@ -96,8 +96,9 @@ export const MyRestaurant = () => {
           <h4 className="text-lg pb-4">No dishes yet.</h4>
         ) : (
           <div className="grid mt-16 md:grid-cols-3 gap-x-5 gap-y-10 px-10">
-            {data?.myRestaurant.restaurant?.menu.map((dish) => (
+            {data?.myRestaurant.restaurant?.menu.map((dish, index) => (
               <Dish
+                key={index}
                 name={dish.name}
                 description={dish.description}
                 price={dish.price}
